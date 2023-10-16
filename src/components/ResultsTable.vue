@@ -45,7 +45,7 @@ const props = defineProps({
     perPage: Number
 })
 
-const data = ref(props.data)
+const data = ref(props.data.reverse())
 
 const currentPage = ref(0)
 
