@@ -44,10 +44,10 @@ async function fetchData() {
       }
 
       return {
-        'Date': date,
+        '日期': date,
         ...whiteBall,
-        'Red': item['PowerBall'],
-        'Play': item['Power Play']
+        '红球': item['PowerBall'],
+        '倍数': item['Power Play']
 
       };
     });
