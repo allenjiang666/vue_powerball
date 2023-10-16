@@ -6,7 +6,7 @@
     </h1>
   </div>
   <div v-if="powballData">
-    <ResultTable :data="powballData" :perPage=13 />
+    <ResultTable :data="powballData" :perPage=18 />
   </div>
   <div class="text-center" v-else>Loading...</div>
 </template>
