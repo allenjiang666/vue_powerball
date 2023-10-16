@@ -1,14 +1,17 @@
 <template>
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg m-3">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg m-5">
         <table class="w-full text-sm text-left text-gray-500 ">
             <thead class="text-xs text-gray-700 uppercase bg-gray-200">
                 <tr>
-                    <th v-for="key in Object.keys(data[0])" :key="key" scope="col" class="px-6 py-3">{{ key }}</th>
+                    <th cope="col" class="px-1 py-2">日期</th>
+                    <th colspan="5" scope="colgroup" class="px-1 py-2">白球</th>
+                    <th cope="col" class="px-1 py-2">红球</th>
+                    <th cope="col" class="px-1 py-2">倍数</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="(result, index) in paginatedData" :key="index" class="bg-white border-b hover:bg-slate-100">
-                    <td v-for="value in Object.values(result)" class="px-6 py-4">{{ value }}</td>
+                    <td v-for="value in Object.values(result)" class="px-1 py-2">{{ value }}</td>
                 </tr>
             </tbody>
         </table>
@@ -29,8 +32,9 @@
         </div>
     </div>
 </template>
+
   
-  
+
   
 <script setup>
 import { ref, computed } from 'vue';
