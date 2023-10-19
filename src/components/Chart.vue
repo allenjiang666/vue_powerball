@@ -1,5 +1,6 @@
 <template>
-    <div ref="plotlyRef" class="h-[90vh]"></div>
+    <h2 class="text-center">数据分布图</h2>
+    <div ref="plotlyRef" class="h-[85vh]"></div>
 </template>
 
 <script setup>
@@ -25,7 +26,6 @@ onMounted(
                 y: coordinates.value.white.dates,
                 x: coordinates.value.white.numbers,
                 mode: 'markers',
-                type: 'scatter',
                 name: '白球',
                 marker: { size: 9 }
             },
@@ -37,16 +37,18 @@ onMounted(
                 name: '红球',
                 marker: {
                     size: 12,
-                    color: "red"
+                    color: "red",
                 }
             }
 
         ], {
-            margin: { t: 0 },
-            title: 'Power 图表',
+
             xaxis: { tickfont: { size: 20 } },
             yaxis: { tickfont: { size: 15 } },
         });
+
+
+
     }
 )
 
