@@ -1,15 +1,11 @@
 <template>
-  <header>
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/chart">chart</RouterLink>
-    </nav>
-  </header>
+  <Layout>
 
-  <div v-if="data">
-    <RouterView :data="data" :perPage=14 />
-  </div>
-  <div class="text-center" v-else>Loading...</div>
+    <div v-if="data">
+      <RouterView :data="data" :perPage=14 />
+    </div>
+    <div class="text-center" v-else>Loading...</div>
+  </Layout>
 </template>
 
 
