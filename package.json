@@ -1,5 +1,5 @@
 {
-  "name": "powerball",
+  "name": "plotly-chart",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -8,15 +8,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "ag-grid-community": "^30.2.0",
-    "ag-grid-vue3": "^30.2.0",
+    "@headlessui/vue": "^1.7.16",
+    "@heroicons/vue": "^2.0.18",
     "appwrite": "^13.0.0",
-    "axios": "^1.5.1",
-    "chart.js": "^4.4.0",
     "flowbite": "^1.8.1",
     "flowbite-vue": "^0.0.17",
+    "plotly.js-dist": "^2.26.2",
     "vue": "^3.3.4",
-    "vue-chartjs": "^5.2.0"
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.3.4",
