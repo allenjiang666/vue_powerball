@@ -18,6 +18,7 @@ const props = defineProps({
 
 const data = ref(null)
 
+
 const coordinates = {
   red: {
     dates: [],
