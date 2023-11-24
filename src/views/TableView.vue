@@ -16,7 +16,7 @@
       </thead>
       <tbody>
         <tr v-for="(result, index) in filteredData" :key="index" class="bg-white border-b hover:bg-slate-100"
-          :class="{ 'bg-rose-50': index === 0 }">
+          :class="{ 'bg-rose-100': index === 0 }">
           <td v-for="[key, value] in Object.entries(result)" :key=key
             :class="{ 'text-red-500': key === '红球', 'font-bold': key === '倍数', 'text-[0.7rem]': key == '日期' }"
             class="px-1 py-2">
@@ -96,7 +96,6 @@ const filteredData = computed(() => paginatedData.value.map(item => {
   // Create a new object with Num1 set to "1"
   let cols = ['Num1', 'Num2', 'Num3', 'Num4', 'Num5']
   let numbers = cols.map((Num) => item[Num] > slider.value * .7 ? item[Num] : null)
-  console.log(numbers)
   const whiteBall = {}
 
   for (let i = 0; i < cols.length; i++) {
