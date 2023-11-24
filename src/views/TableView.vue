@@ -1,5 +1,5 @@
 <template>
-  <div class="relative overflow-x-auto shadow-md p-2 sm:rounded-lg md:m-5">
+  <div class="relative overflow-x-auto shadow-md p-2 sm:rounded-lg">
     <div class="mb-1">
       <h2>Number filter：{{ parseInt(slider * .7) }}</h2>
       <input id="small-range" type="range" v-model="slider"
@@ -15,8 +15,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(result, index) in filteredData" :key="index" class="bg-white border-b hover:bg-slate-100"
-          :class="{ 'bg-rose-100': index === 0 }">
+        <tr v-for="(result, index) in filteredData" :key="index" :class="{ 'bg-red-100': index == 0 }"
+          class="bg-white border-b hover:bg-slate-100">
           <td v-for="[key, value] in Object.entries(result)" :key=key
             :class="{ 'text-red-500': key === '红球', 'font-bold': key === '倍数', 'text-[0.7rem]': key == '日期' }"
             class="px-1 py-2">
@@ -108,7 +108,6 @@ const filteredData = computed(() => paginatedData.value.map(item => {
   }
 }))
 
-console.log(filteredData.value)
 
 function nextPage() {
   if (currentPage.value < totalPages.value) {

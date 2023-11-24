@@ -2,7 +2,7 @@
   <Layout>
 
     <div v-if="data">
-      <RouterView :data="data" :perPage=14 />
+      <RouterView :data="data" :perPage=13 />
     </div>
     <div class="text-center" v-else>Loading...</div>
   </Layout>
