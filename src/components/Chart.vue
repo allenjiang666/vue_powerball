@@ -1,5 +1,5 @@
 <template>
-    <h2 class="text-center">数据分布图</h2>
+    <h2 class="text-center font-semibold text-2xl">Number Distribution</h2>
     <div ref="plotlyRef" class="h-[85vh]"></div>
 </template>
 
@@ -26,7 +26,7 @@ onMounted(
                 y: coordinates.value.white.dates,
                 x: coordinates.value.white.numbers,
                 mode: 'markers',
-                name: '白球',
+                name: 'white',
                 marker: { size: 9 }
             },
             {
@@ -34,7 +34,7 @@ onMounted(
                 x: coordinates.value.red.numbers,
                 mode: 'markers',
                 type: 'scatter',
-                name: '红球',
+                name: 'power ball',
                 marker: {
                     size: 12,
                     color: "red",
